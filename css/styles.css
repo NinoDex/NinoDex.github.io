@@ -1,0 +1,764 @@
+/*
+*
+* Styles.CSS
+* Author: JMG
+*
+*/
+
+
+/*
+* @box-sizing: border-box
+* @FLEXBOX
+* @STYLES PAR DEFAUT
+* @HEADER
+* @MEDIA_QUERIES
+* @MEDIA_PRINT
+*
+*/
+
+
+/*
+* Palette de colors 
+* https://coolors.co/011627-1782ed-d1495b-edae49-fdfffc
+*/
+
+
+/* Color */
+
+.color-1 {
+    color: #011627;
+}
+
+.color-2 {
+    color: black;
+}
+
+.color-3 {
+    color: #84B082;
+}
+
+.color-4 {
+    color: #EDAE49;
+}
+
+.color-5 {
+    color: #FDFFFC;
+}
+
+
+/* Bacground color*/
+
+.b-color-1 {
+    background-color: rgba(28, 28, 30, 1.0);
+}
+
+.b-color-2 {
+    background-color: black;
+}
+
+.b-color-3 {
+    background-color: #84B082;
+}
+
+.b-color-4 {
+    background-color: #EDAE49;
+}
+
+.b-color-5 {
+    background-color: #212121;
+}
+
+
+/* White Color */
+
+.color-white {
+    color: #fff;
+}
+
+
+/* White Color */
+
+.color-white {
+    color: #fff;
+}
+
+
+/* White Color */
+
+.color-grey {
+    color: rgb(208, 208, 208);
+}
+
+
+/* Gray Color
+* https://coolors.co/app/ffffff-afafaf-2e2d33-494850-2c2c34 
+*/
+
+.b-color-gray-1 {
+    background-color: #AFAFAF;
+}
+
+
+/*
+*
+* @Font
+*/
+
+.f-weight-bold {
+    font-weight: bold;
+}
+
+.f-weight-lighter {
+    font-weight: lighter;
+}
+
+
+/*
+*
+* @box-sizing: border-box
+*
+*/
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*
+*
+* @FLEXBOX
+*
+*/
+
+.flex {
+    display: box;
+    /* version 2009 */
+    display: -webkit-box;
+    /* IOS 6.0 */
+    display: -ms-flexbox;
+    /* internet explorer IE10 (2011) */
+    display: -o-flex;
+    display: -webkit-flex;
+    /* IOS 9.0  Opera > 16 */
+    display: flex;
+    /* or inline-flex */
+}
+
+.flex-row {
+    -webkit-box-orient: horizontal;
+    /* IOS 6.0 */
+    -ms-flex-direction: row;
+    /* internet explorer IE10 (2011) */
+    -o-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-column {
+    -webkit-box-orient: vertical;
+    /* IOS 6.0 */
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    /* internet explorer IE10 (2011) */
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/*
+* wrap : les éléments vont à la ligne lorsqu’il n’y a plus la place
+*/
+
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    /* IOS 6.0 */
+    -ms-flex-wrap: wrap;
+    /* internet explorer IE10 (2011) */
+    flex-wrap: wrap;
+}
+
+
+/*
+*justify-content : définit l’alignement sur l’axe principal row ou column.
+*/
+
+.flex-jc-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    /* internet explorer IE10 (2011) */
+    justify-content: flex-start;
+}
+
+.flex-jc-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    /* internet explorer IE10 (2011) */
+    justify-content: flex-end;
+}
+
+.flex-jc-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    /* internet explorer IE10 (2011) */
+    justify-content: center;
+}
+
+.flex-jc-space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    /* internet explorer IE10 (2011) */
+    justify-content: space-between;
+}
+
+.flex-jc-space-around {
+    justify-content: space-around;
+}
+
+
+/*
+* align-items : définit le comportement par défaut de la disposition des
+* éléments flexibles le long de l’axe transversal sur la ligne en cours
+*/
+
+.flex-ai-stretch {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    /* internet explorer IE10 (2011) */
+    align-items: stretch;
+}
+
+.flex-ai-flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    /* internet explorer IE10 (2011) */
+    align-items: flex-start;
+}
+
+.flex-ai-flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    /* internet explorer IE10 (2011) */
+    align-items: flex-end;
+}
+
+.flex-ai-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /* internet explorer IE10 (2011) */
+    align-items: center;
+}
+
+.flex-ai-baseline {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    /* internet explorer IE10 (2011) */
+    align-items: baseline;
+}
+
+
+/*
+* align-content : Si vous avez plusieurs lignes dans votre Flexbox, vous
+* pouvez choisir comment celles-ci seront réparties.Cette propriété n’a aucun
+* effet s’il n’y a qu’une seule ligne dans la Flexbox
+*/
+
+.flex-ac-stretch {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    /* internet explorer IE10 (2011) */
+    align-content: stretch;
+}
+
+.flex-ac-flex-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    /* internet explorer IE10 (2011) */
+    align-content: flex-start;
+}
+
+.flex-ac-flex-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    /* internet explorer IE10 (2011) */
+    align-content: flex-end;
+}
+
+.flex-ac-center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    /* internet explorer IE10 (2011) */
+    align-content: center;
+}
+
+.flex-ac-space-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    /* internet explorer IE10 (2011) */
+    align-content: space-between;
+}
+
+.flex-ac-space-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    /* internet explorer IE10 (2011) */
+    align-content: space-around;
+}
+
+.flex-ac-space-evenly {
+    align-content: space-evenly;
+}
+
+
+/*
+* order :
+*/
+
+.f-order1 {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+}
+
+
+/*
+*
+* @STYLES PAR DEFAUT
+*
+*/
+
+.disp-none {
+    display: none;
+}
+
+img,
+svg {
+    width: 100%;
+}
+
+button,
+select,
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    text-align: center;
+    z-index: 10000;
+    border-bottom: rgba(99, 99, 102, 1) solid 1px;
+}
+
+section {
+    padding: 0px 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    margin-top: 120px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/**
+*
+* @HEADER
+*
+**/
+
+.statusbar {
+    padding: 5px 0;
+    width: 320px;
+}
+.statusbar div{
+    padding: 5px 0;
+}
+
+.header-left {
+    width: 120px;
+    /*background-color: red;*/
+}
+
+.header-center {
+    width: auto;
+    padding: 0 10px;
+    /*background-color: red;*/
+}
+
+.header-right {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.nav-desktop{
+    position: sticky;
+    top: 0;
+    font-size: 14px;
+}
+
+.nav-mobile{
+    display: none;
+    position: absolute;
+    background-color: rgba(41, 41, 41, 0.5);
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    text-align: left;
+    padding-left: 10%;
+    z-index: 1000;
+    border-right: solid 1px black;
+}
+
+.ul-nav {
+    list-style: none;
+}
+
+.li-nav {
+    padding: 10px 10px;
+}
+
+.ham-btn {
+    display: none;
+}
+
+.image-a-la-une {
+    height: 500px;
+}
+
+.icon-header{
+    width: 100px;
+    border-radius:100%;
+}
+
+
+/*
+*
+* @MEDIA_QUERIES
+*
+*/
+
+@media screen and (max-width: 768px) {
+
+    header{
+        position: fixed;
+    }
+
+    .nav-desktop {
+
+        display: none;
+
+    }
+
+    .nav-mobile{
+        display: block;
+    }
+
+    .ul-nav{
+        display: block;
+        text-align: left;
+        padding: 1.2rem 2rem;
+    }
+
+    .ham-btn {
+        display: flex;
+    }
+
+    .image-a-la-une {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    .header-left {
+        padding: 5px;
+    }
+
+    .title{
+        font-size: 24px;
+    }
+
+    .image-a-la-une {
+        height: 150px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 320px) {}
+
+
+/*
+*
+* @MEDIA_PRINT
+*
+*/
+
+@media print {}
+
+
+/*
+*
+* @ANIMATIONS
+*
+ */
+
+
+/*
+*
+* Animation du menu ouverture
+*
+*/
+
+.n-mob-open{
+    animation-duration: 1.5s;
+    animation-name: NavOpen;
+    animation-fill-mode: forwards;
+}
+
+.n-mob-closed{
+    animation-duration: 1s;
+    animation-name: NavClosed;
+    animation-fill-mode: forwards;
+}
+
+@keyframes NavOpen {
+
+    from {
+
+        left: -100%;
+    }
+
+    to {
+
+        left: 0%;
+    }
+}
+
+@keyframes NavClosed {
+
+    from {
+
+        left: 0%;
+    }
+
+    to {
+
+        left: -100%;
+    }
+}
+
+
+/*
+*
+* Animation filter blur
+*
+*/
+
+.filter-blur-enable{
+    animation-duration: 1.5s;
+    animation-name: blur-enabled;
+    animation-fill-mode: forwards;
+}
+
+.filter-blur-disabled{
+    animation-duration: 0.5s;
+    animation-name: blur-disabled;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blur-enabled {
+
+     from {
+
+         filter: blur(0px) grayscale(0) brightness(1);
+     }
+
+     to {
+
+         filter: blur(20px) grayscale(1) brightness(0.5);
+     }
+
+ }
+
+@keyframes blur-disabled {
+
+    from {
+
+        filter: blur(20px) grayscale(1) brightness(0.5);
+    }
+
+    to {
+
+        filter: blur(0px) grayscale(0) brightness(1);
+    }
+
+}
+
+/*
+*
+* Animation rotation BtnBurger
+*
+*/
+
+.translate-btnBurger-enabled{
+    animation-duration: 0.5s;
+    animation-name: btnBurger-enabled;
+    animation-fill-mode: forwards;
+}
+
+.translate-btnBurger-disabled{
+    animation-duration: 0.5s;
+    animation-name: btnBurger-disabled;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btnBurger-enabled {
+
+    from {
+
+        transform: rotate(0);
+        transform-origin: center;
+        filter: blur(0px);
+
+    }
+
+    to {
+
+        transform: rotate(90deg);
+        transform-origin: center;
+        filter: blur(20px);
+    }
+
+}
+
+@keyframes btnBurger-disabled {
+
+    from {
+
+        transform: rotate(90deg);
+        transform-origin: center;
+        filter: blur(20px);
+    }
+
+    to {
+
+        transform: rotate(0);
+        transform-origin: center;
+        filter: blur(0);
+    }
+
+}
+/*
+*
+* Animation croix BtnBurger
+*
+*/
+
+.translate-cross-enabled{
+    animation-duration: 0.5s;
+    animation-name: cross-enabled;
+    animation-fill-mode: forwards;
+}
+
+.translate-cross-disabled{
+    animation-duration: 0.5s;
+    animation-name: cross-disabled;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cross-enabled {
+
+    from {
+
+        display: block;
+        transform: rotate(90deg);
+        transform-origin: center;
+        filter: blur(20px);
+
+
+    }
+
+    to {
+
+        transform: rotate(0);
+        transform-origin: center;
+        filter: blur(0px);
+    }
+
+}
+
+@keyframes cross-disabled {
+
+    from {
+
+        transform: rotate(0);
+        transform-origin: center;
+        filter: blur(0px);
+    }
+
+    to {
+
+        display: none;
+        transform: rotate(90deg);
+        transform-origin: center;
+        filter: blur(20px);
+    }
+
+}
